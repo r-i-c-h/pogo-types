@@ -6,17 +6,19 @@ This compares strengths\weaknesses for all 18 Pokemon Types. Specifically, this 
 
 On the suface, using React and Typescript for a One-Page-Table is absurd, but for the sake of prettier code management, might as well try it...
 
-Big thanks to [Simone Masiero](https://github.com/duiker101/pokemon-type-svg-icons) & [Daniel Motta](https://dribbble.com/shots/4862612-Pokedex-iOS-app)) for the Icon SVG assets!
+Big thanks to [Simone Masiero](https://github.com/duiker101/pokemon-type-svg-icons) & [Daniel Motta](https://dribbble.com/shots/4862612-Pokedex-iOS-app) for the Icon SVG assets!
+
+I experimented with making the SVGs all render as links to jump/slide to the appropriate row, but it ended up as a bad UX because so many rows were unable to be scrolled to (= Unless we choose to add a bunch of padding/content below the table, "Water" will never be able to be scrolled to).
 
 Deploy to be via github-pages...
 
 # Notes to self...
 >> FONTS: Archivo Black or Anonymous Pro
->> BUGFIX: Visual Divider between columns
+>> BUGFIX: Visual Divider between columns = `td:not(:last-child) { border-right: 1px solid #000; }`
 >> BUGFIX: Alt row backgrounds?
 >> BUGFIX: Add color to column headings green/red...
->> BUGFIX: Overlap From the SuperTitles background into the Type Cell's borders area.
-
+>> BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
+>> BUGFIX: Add border-radius to SuperTitles and box-shadow
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 In the original, the SVGs for each file had fill="none", but the independent `<path>` elements within each one had the fill="#fff"
