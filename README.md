@@ -4,21 +4,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This compares strengths\weaknesses for all 18 Pokemon Types. Specifically, this is *only* handling the damage system from Pokemon **GO**, not the main series which has actual immunities.
 
-On the suface, using React for a One-Page-Table is absurd, but for the sake of prettier code management, might as well try it...
+On the suface, using React and Typescript for a One-Page-Table is absurd, but for the sake of prettier code management, might as well try it...
 
 Big thanks to [Simone Masiero](https://github.com/duiker101/pokemon-type-svg-icons) & [Daniel Motta](https://dribbble.com/shots/4862612-Pokedex-iOS-app)) for the Icon SVG assets!
 
 Deploy to be via github-pages...
 
-Notes to self...
+# Notes to self...
+
+BUGFIX: Visual Divider between columns
+BUGFIX: Lock the 2 sides of the table to a certain ratio...
+BUGFIX: Page Title Shouldn't be React-App
+BUGFIX: Overlap From the SuperTitles background into the Type Cell's borders area.
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 In the original, the SVGs for each file had fill="none", but the independent `<path>` elements within each one had the fill="#fff"
 
 The Icons' core viewBox size is 512 x 512
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 See https://codepen.io/r-i-c-h/pen/ZEGNVmZ?editors=0100 for managing SVG Icons with `<use>`
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 To minify SVGs, use
   svgo --folder=./orig-icons --output=./svgs --disable=removeviewbox --enable=removeDimensions,cleanupListOfValues,sortAttrs
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 To combine files (though has no ____)
   cat *.svg > mergedfile.svg

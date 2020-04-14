@@ -1,19 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+  /* prettier-ignore */
+  *,*::before,*::after{ box-sizing: border-box; }
+  /* prettier-ignore */
+  :root{
+    font-family: sans-serif;
+    margin: 1rem;
+    --foo: 123px;
   }
-  html,
+  /* prettier-ignore */
+  html,body{ height:100%; margin:0;padding:0;}
   body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    text-align: center;
     background: lightblue;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+  }
+  h1 {
+    text-align: center;
   }
   table {
     border-collapse: collapse;
