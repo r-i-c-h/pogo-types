@@ -7,12 +7,11 @@ import TableBody from './TableBody';
 const TheTable = styled.table`
   margin: auto;
   margin-top: 0.4em;
-  /* border-spacing: 0; */
   margin-bottom: 1rem;
-`;
-
-const EachSide = styled.colgroup`
-  width: 45%;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 `;
 
 const Table = () => (

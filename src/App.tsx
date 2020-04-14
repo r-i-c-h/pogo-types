@@ -9,20 +9,27 @@ const AppWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
+`;
+
+const PageHead = styled.div`
+  text-align: center;
   & h1, h2, h5 {
-    text-align: center;
     margin: 0;
     padding: 0;
-    /* font-size: 1.2rem; */
   }
 `;
+const PageHeading = () => {
+  return (<PageHead><h1>POKEMON GO TYPES</h1>
+    <h5>(AKA &quot;Type Effectiveness&quot;)</h5>
+  </PageHead>
+  );
+};
 
 function App() {
   return (<>
     <SVGSymbols />
     <AppWrapper>
-      <h1>POKEMON GO <em>TYPE INTERACTIONS</em></h1>
-      <h5>(AKA &quot;Type Effectiveness&quot;)</h5>
+      <PageHeading />
       <Table />
     </AppWrapper>
   </>);

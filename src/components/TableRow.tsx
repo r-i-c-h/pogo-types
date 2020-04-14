@@ -8,9 +8,9 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 
 const TRow = styled.tr`
   background: lightcyan;
-  border-bottom: 1px solid gray;
+  border-bottom: var(--row-border);
 `;
-const FloatRightCell = styled.div`
+const CellContentOnRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -19,7 +19,7 @@ const FloatRightCell = styled.div`
   padding: 2px;
 `;
 
-const FloatLeftCell = styled(FloatRightCell)`
+const CellContentOnLeft = styled(CellContentOnRight)`
   justify-content: flex-start;
 `;
 
@@ -31,11 +31,11 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
 
   return (
     <TRow>
-      <td><FloatRightCell>{typeData.isGoodVs.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</FloatRightCell></td>
-      <td><FloatRightCell>{typeData.isBadVs.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</FloatRightCell></td>
+      <td><CellContentOnRight>{typeData.isGoodVs.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</CellContentOnRight></td>
+      <td><CellContentOnRight>{typeData.isBadVs.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</CellContentOnRight></td>
       <TableRowHeader pogoType={pogoType} />
-      <td><FloatLeftCell>{typeData.isSafeFrom.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</FloatLeftCell></td>
-      <td><FloatLeftCell>{typeData.isWeakTo.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</FloatLeftCell></td>
+      <td><CellContentOnLeft>{typeData.isSafeFrom.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</CellContentOnLeft></td>
+      <td><CellContentOnLeft>{typeData.isWeakTo.map((x: string) => (<Ico key={x + 'ico'} name={x} />))}</CellContentOnLeft></td>
     </TRow>
   );
 };

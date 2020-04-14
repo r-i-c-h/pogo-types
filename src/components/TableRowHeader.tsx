@@ -5,8 +5,8 @@ import Ico from './Ico';
 
 const StyledRowHeader = styled.th`
   font-size: 1.2rem;
-  border-left: 4px double #000;
-  border-right: 4px double #000;
+  border-left: var(--center-col-border);
+  border-right: var(--center-col-border);
   margin: .2rem;
   text-transform: uppercase;
 `;

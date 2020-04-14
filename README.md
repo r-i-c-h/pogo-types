@@ -12,10 +12,10 @@ Deploy to be via github-pages...
 
 # Notes to self...
 
-BUGFIX: Visual Divider between columns
-BUGFIX: Lock the 2 sides of the table to a certain ratio...
-BUGFIX: Page Title Shouldn't be React-App
-BUGFIX: Overlap From the SuperTitles background into the Type Cell's borders area.
+>> BUGFIX: Visual Divider between columns
+>> BUGFIX: Alt row backgrounds?
+>> BUGFIX: Add color to column headings green/red...
+>> BUGFIX: Overlap From the SuperTitles background into the Type Cell's borders area.
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
