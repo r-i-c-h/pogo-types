@@ -19,19 +19,3 @@ const TableBody: React.FC = (): JSX.Element => (
 );
 
 export default TableBody;
-
-/**
-
-
-        <tr>
-          <td class="col-destroys">
-            <use xlink:href="#steel" href="#steel" />
-            Steel Rock Normal Ice Dark</td>
-          <td class="col-bad">Flying Poison Psychic Bug Ghost Fairy</td>
-          <th class="col-type">Fighting</th>
-          <td class="col-safe">Rock Bug Dark</td>
-          <td class="col-killed">Flying Psychic Fairy</td>
-        </tr>
-      </tbody>
-    </table>
-*/

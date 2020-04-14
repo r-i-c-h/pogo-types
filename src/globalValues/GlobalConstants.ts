@@ -1,5 +1,5 @@
-import data from '../globalValues/pogoTypeEffectiveness.json';
-import { PogoTypesJSON, LookupObj } from './interfaces';
+import data from './pogoTypeEffectiveness.json';
+import { PogoTypesJSON, LookupObj } from './Interfaces';
 /* prettier-ignore */
 export const typesArr = [ 'bug', 'dark', 'dragon', 'electric', 'fire', 'fairy', 'fighting', 'flying', 'ghost', 'grass', 'ground', 'ice', 'normal', 'poison', 'psychic', 'rock', 'steel', 'water' ];
 export const typeColors = {
