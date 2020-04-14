@@ -41,8 +41,8 @@ const TableHeading = () => (
   <TheHeader>
     <tr>
       <SuperTitle colSpan={2} scope="colgroup" color="green"><span role="img" aria-label="swords">⚔️⚔️</span>Move Effectiveness<span role="img" aria-label="swords">⚔️⚔️</span></SuperTitle>
-      <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Pokemon Type</TypeColumnTitle>
-      <SuperTitle colSpan={2} scope="colgroup" color="red"><span role="img" aria-label="shield">🛡</span>Pokemon Weaknesses<span role="img" aria-label="shield">🛡</span></SuperTitle>
+      <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Pokémon Type</TypeColumnTitle>
+      <SuperTitle colSpan={2} scope="colgroup" color="red"><span role="img" aria-label="shield">🛡</span>Pokémon Weaknesses<span role="img" aria-label="shield">🛡</span></SuperTitle>
     </tr>
 
     <HeaderBottomRow>
