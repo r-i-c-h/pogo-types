@@ -4,7 +4,7 @@ import { typesArr } from '../globalValues/GlobalConstants';
 import TableRow from './TableRow';
 
 const TBody = styled.tbody`
-  box-shadow: 0px 2px 2px 0px rgba(50,50,50,0.5);
+  box-shadow: var(--boxshadow);
   border-right: 1px solid rgba(50,50,50,0.5);
   border-left: 1px solid rgba(50,50,50,0.5);
 `;

@@ -5,11 +5,13 @@ export const GlobalStyle = createGlobalStyle`
   *,*::before,*::after{ box-sizing: border-box; }
   /* prettier-ignore */
   :root{
-    --center-col-border: 3px double #000;
-    --col-border: 1px solid #bbb;
     --header-white: #fefefe;
+    --clr-gray: #999999;
+    --clr-light: #dddddd;
+    --col-border: 1px solid #bbb;
     --row-border: 1px solid #999;
-    --boxy: 0px 2px 3px 0px rgba(50,50,50,0.5);
+    --center-col-border: 3px double #000;
+    --boxshadow: 0px 2px 3px 0px rgba(50,50,50,0.5);
   }
   /* prettier-ignore */
   html,body{ height:100%; margin:0; padding:0;}

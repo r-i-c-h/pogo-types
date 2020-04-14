@@ -8,16 +8,17 @@ const TheHeader = styled.thead`
   top: 0;
 `;
 const SuperTitle = styled.th`
-  background: #dddddd;
+  background: var(--clr-light);
   color: ${props => props.color};
   margin: 0.2rem;
 `;
 const TypeColumnTitle = styled.th`
+  font-weight: bold;
   width: 7rem; /* MAGIC NUMBER */
   background: var(--header-white);
   text-transform: uppercase;
-  border-bottom: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
+  border-top: 1px solid var(--clr-light);
+  border-bottom: var(--row-border);
   border-left: var(--center-col-border);
   border-right: var(--center-col-border);
 `;
@@ -33,7 +34,7 @@ const ColTitle = styled.th`
 const HeaderBottomRow = styled.tr`
   border-top: var(--row-border);
   border-bottom: var(--row-border);
-  box-shadow: 0px 2px 3px 0px rgba(50,50,50,0.5);
+  box-shadow: var(--boxshadow);
 `;
 
 const TableHeading = () => (

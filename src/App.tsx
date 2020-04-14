@@ -15,10 +15,12 @@ const AppWrapper = styled.div`
 const PageHead = styled.div`
   text-align: center;
   & h1 {
-    font-size: 1rem;
-    font-weight: bold;
-    /* margin: 0; */
-    /* padding: 0; */
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-decoration:
   }
 `;
 const PageHeading = () => {
