@@ -9,6 +9,7 @@ const StyledRowHeader = styled.th`
   border-right: var(--center-col-border);
   margin: .2rem;
   text-transform: uppercase;
+  background: var(--header-white);
 `;
 const RowHeaderIco = styled(Ico)`
   display: block;

@@ -9,20 +9,22 @@ const AppWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
+  max-width: 960px;
 `;
 
 const PageHead = styled.div`
   text-align: center;
-  & h1, h2, h5 {
-    margin: 0;
-    padding: 0;
+  & h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    /* margin: 0; */
+    /* padding: 0; */
   }
 `;
 const PageHeading = () => {
-  return (<PageHead><h1>POKEMON GO TYPES</h1>
-    <h5>(AKA &quot;Type Effectiveness&quot;)</h5>
-  </PageHead>
-  );
+  return (<PageHead>
+    <h1>POKEMON GO TYPE EFFECTIVENESS</h1>
+  </PageHead>);
 };
 
 function App() {

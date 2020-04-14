@@ -6,10 +6,8 @@ import TableBody from './TableBody';
 
 const TheTable = styled.table`
   margin: auto;
-  margin-top: 0.4em;
-  margin-bottom: 1rem;
   table-layout: fixed;
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
   border-spacing: 0;
 `;
