@@ -7,14 +7,17 @@ interface ThemeColors {
 
 const IconSVG = styled.svg`
 display: inline-block;
-  height: 2em;
-  width: 2em;
-  margin: 0.2em;
+  height: 1.4em;
+  width: 1.4em;
+  margin: 0.1em;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
   fill: ${props => {
     let colorBank: ThemeColors = typeColors;
     const pogoType: string = (props.name || '');
     return colorBank[pogoType];
   }};
+  stroke: var(--clr-gray);
 `;
 
 interface Props {
