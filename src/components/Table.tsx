@@ -12,10 +12,20 @@ const TheTable = styled.table`
   border-spacing: 0;
 `;
 
+const TitleLine = styled.caption`
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0.2rem;
+    padding: 0;
+  }
+`;
 const Table = () => (
   <TheTable>
+    <TitleLine><h1>POKÉMON GO TYPE EFFECTIVENESS</h1></TitleLine>
     <colgroup span={2}></colgroup>
-    <col />
+    <colgroup span={1}></colgroup>
     <colgroup span={2}></colgroup>
     <TableHeading />
     <TableBody />
