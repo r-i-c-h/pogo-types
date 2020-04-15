@@ -9,7 +9,7 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 const TRow = styled.tr`
   border-bottom: var(--row-border);
 `;
-const CellContentOnRight = styled.div`
+const CellContentsToRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -17,7 +17,7 @@ const CellContentOnRight = styled.div`
   padding: 2px;
 `;
 
-const CellContentOnLeft = styled(CellContentOnRight)`
+const CellContentsToLeft = styled(CellContentsToRight)`
   justify-content: flex-start;
 `;
 
@@ -29,11 +29,21 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
 
   return (
     <TRow>
-      <td><CellContentOnRight>{typeData.isGoodVs.map((x: string) => (<Ico key={x + 'icoGood'} name={x} />))}</CellContentOnRight></td>
-      <td><CellContentOnRight>{typeData.isBadVs.map((x: string) => (<Ico key={x + 'icoBad'} name={x} />))}</CellContentOnRight></td>
+      <td><CellContentsToRight>{typeData.isGoodVs.map((theName: string) => (<Ico key={theName + 'icoGood'} name={theName} />))}</CellContentsToRight></td>
+      <td><CellContentsToRight>{
+        typeData.isBadVs.map((theName: string) => (
+          <Ico key={theName + 'icoBad'} name={theName} isExtra={typeData.isExtraBadVs.includes(theName)} />
+        ))
+      }</CellContentsToRight></td>
+
       <TableRowHeader pogoType={pogoType} />
-      <td><CellContentOnLeft>{typeData.isSafeFrom.map((x: string) => (<Ico key={x + 'icoSafe'} name={x} />))}</CellContentOnLeft></td>
-      <td><CellContentOnLeft>{typeData.isWeakTo.map((x: string) => (<Ico key={x + 'icoWeak'} name={x} />))}</CellContentOnLeft></td>
+
+      <td><CellContentsToLeft>{
+        typeData.isSafeFrom.map((theName: string) => (
+          <Ico key={theName + 'icoSafe'} name={theName} isExtra={typeData.isExtraSafeFrom.includes(theName)} />)
+        )}
+      </CellContentsToLeft></td>
+      <td><CellContentsToLeft>{typeData.isWeakTo.map((theName: string) => (<Ico key={theName + 'icoWeak'} name={theName} />))}</CellContentsToLeft></td>
     </TRow>
   );
 };

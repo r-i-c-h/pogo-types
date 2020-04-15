@@ -13,7 +13,9 @@ export interface LookupObj {
   [key: string]: {
     isGoodVs: string[];
     isBadVs: string[];
+    isExtraBadVs: string[];
     isWeakTo: string[];
     isSafeFrom: string[];
+    isExtraSafeFrom: string[];
   };
 }

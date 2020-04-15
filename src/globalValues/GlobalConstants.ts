@@ -35,16 +35,20 @@ function createDataLookup() {
         lookupObj[baseType] = {
           isGoodVs: [],
           isBadVs: [],
+          isExtraBadVs: [],
           isWeakTo: [],
           isSafeFrom: [],
+          isExtraSafeFrom: [],
         };
       }
       if (!lookupObj[comparedType]) {
         lookupObj[comparedType] = {
           isGoodVs: [],
           isBadVs: [],
+          isExtraBadVs: [],
           isWeakTo: [],
           isSafeFrom: [],
+          isExtraSafeFrom: [],
         };
       }
 
@@ -56,9 +60,15 @@ function createDataLookup() {
       if (val < 1) {
         lookupObj[baseType].isBadVs.push(comparedType);
         lookupObj[comparedType].isSafeFrom.push(baseType);
+        if (val < 0.625) {
+          lookupObj[baseType].isExtraBadVs.push(comparedType);
+          lookupObj[comparedType].isExtraSafeFrom.push(baseType);
+        }
       }
     }
   }
+  console.log(lookupObj);
+
   return lookupObj;
 }
 
