@@ -5,28 +5,34 @@ interface ThemeColorsObj {
   [key: string]: string;
 }
 
-const IconSVG = styled.svg<Props>`
-display: inline-block;
-  height: 1.4em;
-  width: 1.4em;
-  margin: 0.1em;
+interface IcoProps {
+  name: string;
+  isExtra?: boolean;
+}
+
+const IconSVG = styled.svg<IcoProps>`
+  display: inline-block;
+  height: 1.2em;
+  width: 1.2em;
   fill-rule: evenodd;
   clip-rule: evenodd;
   stroke: var(--clr-gray);
   stroke-width: 5;
-  fill: ${(props: Props) => {
+  fill: ${ props => {
     let colorBank: ThemeColorsObj = typeColors;
-    const pogoType: string = (props.name || '');
-    return colorBank[pogoType];
+    return colorBank[props.name];
   }};
+  ${ props =>
+    props.isExtra &&
+    `border-radius: 50%;
+    border: 1px solid var(--clr-gray);
+    box-shadow: 0px 2px 3px 0px rgba(50,50,50,1);
+    margin: 0.2em;
+    `
+  };
 `;
 
-interface Props {
-  name: string;
-  isExtra?: boolean | undefined;
-}
-
-const Ico: React.FC<Props> = ({ name }): JSX.Element => {
+const Ico: React.FC<IcoProps> = ({ name, isExtra }): JSX.Element => {
   const generateUseTag = (name: string) => {
     return (<use href={'#'.concat(name)} />);
   };
@@ -35,10 +41,10 @@ const Ico: React.FC<Props> = ({ name }): JSX.Element => {
   //        <use xlinkHref=#{name} />
 
   return (
-    <IconSVG name={name}>
+    <IconSVG name={name} isExtra={isExtra}>
       {generateUseTag(name)}
     </IconSVG>
   );
 };
 
-export default Ico;
+export default Ico;;

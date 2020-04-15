@@ -67,8 +67,6 @@ function createDataLookup() {
       }
     }
   }
-  console.log(lookupObj);
-
   return lookupObj;
 }
 
