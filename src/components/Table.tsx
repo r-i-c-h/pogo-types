@@ -20,10 +20,15 @@ const TitleLine = styled.caption`
     margin: 0.2rem;
     padding: 0;
   }
+  & .dropWordOnMobile {
+    @media screen and (max-width: 640px){
+    display: none;
+  }
+  }
 `;
 const Table = () => (
   <TheTable>
-    <TitleLine><h1>POKÉMON GO TYPE EFFECTIVENESS</h1></TitleLine>
+    <TitleLine><h1>POKÉMON GO TYPES<span className="dropWordOnMobile"> EFFECTIVENESS</span></h1></TitleLine>
     <colgroup span={2}></colgroup>
     <colgroup span={1}></colgroup>
     <colgroup span={2}></colgroup>

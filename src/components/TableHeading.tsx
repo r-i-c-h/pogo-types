@@ -9,12 +9,11 @@ const TheHeader = styled.thead`
 `;
 const SuperTitle = styled.th`
   background: var(--clr-light);
-  color: ${props => props.color};
   margin: 0.2rem;
 `;
 const TypeColumnTitle = styled.th`
   font-weight: bold;
-  width: 7rem; /* MAGIC NUMBER */
+  max-width: 7rem; /* MAGIC NUMBER */
   background: var(--header-white);
   text-transform: uppercase;
   border-top: 1px solid var(--clr-light);
@@ -25,6 +24,8 @@ const TypeColumnTitle = styled.th`
 
 const ColTitle = styled.th`
   background: var(--header-white);
+  color: ${props => props.color};
+  text-transform: uppercase;
   font-size: 1rem;
   text-align: center;
   border-left: var(--col-border);
@@ -37,12 +38,33 @@ const HeaderBottomRow = styled.tr`
   box-shadow: var(--boxshadow);
 `;
 
+const EmojiSpan = styled.span`
+  @media screen and (max-width: 960px){
+    display: none;
+  }
+`;
+
+const DropWordOnMobile = styled.span`
+  @media screen and (max-width: 640px){
+    display: none;
+  }
+`;
+
+
 const TableHeading = () => (
   <TheHeader>
     <tr>
-      <SuperTitle colSpan={2} scope="colgroup" color="green"><span role="img" aria-label="swords">⚔️⚔️</span>Move Effectiveness<span role="img" aria-label="swords">⚔️⚔️</span></SuperTitle>
-      <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Pokémon Type</TypeColumnTitle>
-      <SuperTitle colSpan={2} scope="colgroup" color="red"><span role="img" aria-label="shield">🛡</span>Pokémon Weaknesses<span role="img" aria-label="shield">🛡</span></SuperTitle>
+      <SuperTitle colSpan={2} scope="colgroup" color="green">
+        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan>
+        <DropWordOnMobile>Move</DropWordOnMobile> Effectiveness
+        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan>
+      </SuperTitle>
+      <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Type</TypeColumnTitle>
+      <SuperTitle colSpan={2} scope="colgroup" color="red">
+        <EmojiSpan role="img" aria-label="shield">🛡</EmojiSpan>
+        <DropWordOnMobile>Pokémon</DropWordOnMobile> Weaknesses
+        <EmojiSpan role="img" aria-label="shield">🛡</EmojiSpan>
+      </SuperTitle>
     </tr>
 
     <HeaderBottomRow>
