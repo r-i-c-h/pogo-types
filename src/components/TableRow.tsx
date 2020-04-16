@@ -9,6 +9,13 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 const TRow = styled.tr`
   border-bottom: var(--row-border);
 `;
+const TData = styled.td`
+  padding: 0.1rem;
+  & :nth-of-type(2),
+  & :nth-of-type(4) {
+    border-left: var(--col-border);
+  }
+`;
 const CellContentsToRight = styled.div`
   --normal-sort-order: 0; /** resorting for "double-resist" icons in Ico.jsx **/
   --override-sort-order: 1;
@@ -16,7 +23,6 @@ const CellContentsToRight = styled.div`
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 2px;
 `;
 
 const CellContentsToLeft = styled(CellContentsToRight)`
@@ -33,21 +39,21 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
 
   return (
     <TRow>
-      <td><CellContentsToRight>{typeData.isGoodVs.map((theName: string) => (<Ico key={theName + 'icoGood'} name={theName} />))}</CellContentsToRight></td>
-      <td><CellContentsToRight>{
+      <TData><CellContentsToRight>{typeData.isGoodVs.map((theName: string) => (<Ico key={theName + 'icoGood'} name={theName} />))}</CellContentsToRight></TData>
+      <TData><CellContentsToRight>{
         typeData.isBadVs.map((theName: string) => (
           <Ico key={theName + 'icoBad'} name={theName} isExtra={typeData.isExtraBadVs.includes(theName)} />
         ))
-      }</CellContentsToRight></td>
+      }</CellContentsToRight></TData>
 
       <TableRowHeader pogoType={pogoType} />
 
-      <td><CellContentsToLeft>{
+      <TData><CellContentsToLeft>{
         typeData.isSafeFrom.map((theName: string) => (
           <Ico key={theName + 'icoSafe'} name={theName} isExtra={typeData.isExtraSafeFrom.includes(theName)} />)
         )}
-      </CellContentsToLeft></td>
-      <td><CellContentsToLeft>{typeData.isWeakTo.map((theName: string) => (<Ico key={theName + 'icoWeak'} name={theName} />))}</CellContentsToLeft></td>
+      </CellContentsToLeft></TData>
+      <TData><CellContentsToLeft>{typeData.isWeakTo.map((theName: string) => (<Ico key={theName + 'icoWeak'} name={theName} />))}</CellContentsToLeft></TData>
     </TRow>
   );
 };
