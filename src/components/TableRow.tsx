@@ -10,6 +10,8 @@ const TRow = styled.tr`
   border-bottom: var(--row-border);
 `;
 const CellContentsToRight = styled.div`
+  --normal-sort-order: 0; /** resorting for "double-resist" icons in Ico.jsx **/
+  --override-sort-order: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -18,6 +20,8 @@ const CellContentsToRight = styled.div`
 `;
 
 const CellContentsToLeft = styled(CellContentsToRight)`
+  --normal-sort-order: 1;   /** resorting for "double-resist" icons in Ico.jsx **/
+  --override-sort-order:0;
   justify-content: flex-start;
 `;
 
