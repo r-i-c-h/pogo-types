@@ -1,26 +1,39 @@
-#Pokemon Go Type-Chart
+# Pokemon Go Type-Chart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) w/TypeScript.
+This project was bootstrapped via [Create React App](https://github.com/facebook/create-react-app) w/TypeScript.
 
-This compares strengths\weaknesses for all 18 Pokemon Types. Specifically, this is *only* handling the damage system from Pokemon **GO**, not the main series which has actual immunities.
+This compares strengths\weaknesses for all 18 Pokemon Types. Specifically, this is *only* handling the damage system from Pokémon **GO**, not the main series which has actual immunities, double-weaknesses, and basically a different set of stats.
 
-On the suface, using React and Typescript for a One-Page-Table is absurd, but for the sake of prettier code management, might as well try it...
+On the suface, using React and Typescript for a One-Page-Table is **absurd**. __God help you__ if this is the way you seriously think this sort of information needs to be pushed to the web. So why am I doing this? Mainly to experiment with the UI, for the sake of prettier code management of the icons, and a possible envisioned UI for limiting results...But my point is, for what is here to start, I already know, and I want you to know, this is way overkill!
 
 Big thanks to [Simone Masiero](https://github.com/duiker101/pokemon-type-svg-icons) & [Daniel Motta](https://dribbble.com/shots/4862612-Pokedex-iOS-app) for the Icon SVG assets!
+
+Huge thanks to [Roundicons](https://roundicons.com/icon-packs/pokemon-go-filled-outline-icons/) for the logo assets!
 
 I experimented with making the SVGs all render as links to jump/slide to the appropriate row, but it ended up as a bad UX because so many rows were unable to be scrolled to (= Unless we choose to add a bunch of padding/content below the table, "Water" will never be able to be scrolled to).
 
 Deploy to be via github-pages...
 
-# Notes to self...
->> FONTS: Archivo Black or Anonymous Pro
->> BUGFIX: Visual Divider between columns = `td:not(:last-child) { border-right: 1px solid #000; }`
->> BUGFIX: Alt row backgrounds?
->> BUGFIX: Add color to column headings green/red...
+# TASK LIST...
+>> FIX: Column Widths
+>> FONTS: Set for final design. Maybe Archivo Black? Anonymous Pro?
+
+>> FEAT: Alt row backgrounds?
 >> BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
 >> BUGFIX: Add border-radius to SuperTitles and box-shadow
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+>> BUGFIX: Firefox won't display double dorders...
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+Ghost => Normal
+Normal => Ghost
+Fighting => Ghost
+Dragon => Fairy
+Poison => Steel
+Psychic => Dark
+Electric => Ground
+Ground => Flying
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 In the original, the SVGs for each file had fill="none", but the independent `<path>` elements within each one had the fill="#fff"
 
 The Icons' core viewBox size is 512 x 512
@@ -36,29 +49,38 @@ To combine files (though has no ____)
   cat *.svg > mergedfile.svg
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+Colors Pulled From Web:
+Pogo Red - #ED2721
+Pogo Yellow - #FFCC03
+Pogo YellowDrk - #D4A507
+Pogo TrdScreenBlue - #6FC5F8
+Pogo SkyBlue - #4EC2EF
+Pogo Gray - #ECE8EE
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 CSS Colors from prev:
 ```css
 .bug { background: #92BC2C; }
-.dark { background: #595761; }
+.dark { background: #595761; } // #605F6E // #545568
 .dragon { background: #0C69C8; }
-.electric { background: #F2D94E; }
-.fire { background: #FBA54C; }
+.electric { background: #F2D94E; } // #FDCE36
+.fire { background: #FBA54C; } // #FD9419
 .fairy { background: #EE90E6;}
 .fighting { background: #D3425F;}
-.flying { background: #A1BBEC;}
+.flying { background: #A1BBEC;} // #5B71CE
 .ghost { background: #5F6DBC;}
-.grass { background: #5FBD58;}
-.ground { background: #DA7C4D;}
-.ice { background: #75D0C1;}
-.normal { background: #A0A29F;}
+.grass { background: #5FBD58;} // #2F9F3B
+.ground { background: #DA7C4D;} // #BB5522
+.ice { background: #75D0C1;}    //
+.normal { background: #A0A29F;} // #979EA5
 .poison { background: #B763CF;}
-.psychic { background: #FA8581;}
+.psychic { background: #FA8581;} // #FD7767
 .rock { background: #C9BB8A;}
 .steel { background: #5695A3;}
-.water { background: #539DDF;}
+.water { background: #539DDF;} // #4FA6D6
 ```
 
 AS OBJ:
+```js
 const clrbkg = {
   'bug': '#92bc2c',
   'dark':'#595761',
@@ -79,7 +101,7 @@ const clrbkg = {
   'steel':'#5695a3',
   'water':'#539ddf',
 }
-
+```
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 <svg id="symbols" xmlns="http://www.w3.org/2000/svg">
     <symbol viewBox="0 0 512 512" id="bug"><path id="bug-path" d="M342.198.501a1.176 1.176 0 011.637-.288l36.354 25.455c.532.372.661 1.105.289 1.637l-50.599 72.262c24.599 7.859 41.358 16.336 41.358 16.336s-40.964 70.462-110.443 70.462-118.85-65.672-118.85-65.672 17.506-11.172 43.456-20.754l-55.5-66.141a1.176 1.176 0 01.145-1.656l33.997-28.527a1.175 1.175 0 011.656.145l70.272 83.746c6.017-.68 12.147-1.06 18.333-1.06 8.891 0 17.771.675 26.44 1.822zm13.746 189.201c18.541-13.242 46.597-47.804 46.597-47.804s71.664 56.79 71.664 177.206c0 120.415-123.896 192.888-123.896 192.888s-59.195-59.781-73.727-135.562c-14.531-75.781 21.496-159.927 21.496-159.927s39.324-13.559 57.866-26.801zm-199.683 0c-18.541-13.242-46.597-47.804-46.597-47.804S38 198.688 38 319.104c0 120.415 123.896 192.888 123.896 192.888s59.195-59.781 73.727-135.562c14.531-75.781-21.496-159.927-21.496-159.927s-39.324-13.559-57.866-26.801z"/></symbol>
@@ -105,3 +127,7 @@ const clrbkg = {
 <svg class="icon dragon"> <use xlink:href="#dragon" /> </svg>
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+http://www.nintendolife.com/news/2020/03/guide_pokemon_go_type_chart_-_effectiveness_and_weakness_for_all_18_types
+https://www.polygon.com/pokemon-go-guide/2020/2/4/21121160/type-strength-weakness-super-effective-weakness-chart
+https://www.dexerto.com/pokemon/pokemon-go-type-chart-effectiveness-table-1294144
