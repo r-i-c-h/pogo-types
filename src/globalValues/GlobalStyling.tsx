@@ -16,12 +16,15 @@ export const GlobalStyle = createGlobalStyle`
   /* prettier-ignore */
   html,body{ height:100%; margin:0; padding:0;}
   body {
-    background: #F0F8FF;
-    font-family: 'Raleway', sans-serif;
+  background: #F0F8FF;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
