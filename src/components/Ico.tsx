@@ -12,8 +12,8 @@ interface IcoProps {
 
 const IconSVG = styled.svg<IcoProps>`
   display: inline-block;
-  height: 1.2em;
-  width: 1.2em;
+  height: 1em;
+  width: 1em;
   fill-rule: evenodd;
   clip-rule: evenodd;
   stroke: var(--clr-gray);
@@ -29,7 +29,7 @@ const IconSVG = styled.svg<IcoProps>`
     order: var(--override-sort-order);
     border: 1px solid var(--clr-gray);
     box-shadow: 0px 2px 3px 2px rgba(50,50,50,1);
-    margin: 0.2em;
+    margin: 0.1em;
     `
   };
 `;

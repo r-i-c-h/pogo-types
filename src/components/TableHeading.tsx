@@ -13,9 +13,10 @@ const SuperTitle = styled.th`
 `;
 const TypeColumnTitle = styled.th`
   font-weight: bold;
-  max-width: 7rem; /* MAGIC NUMBER */
+  width: 12vw; /* This doesn't take a max\min-width. ONLY a width :-/  7rem = MAGIC NUMBER */
   background: var(--header-white);
   text-transform: uppercase;
+  text-align: center;
   border-top: 1px solid var(--clr-light);
   border-bottom: var(--row-border);
   border-left: var(--center-col-border);
@@ -23,10 +24,11 @@ const TypeColumnTitle = styled.th`
 `;
 
 const ColTitle = styled.th`
-  background: var(--header-white);
+  font-size: 0.8rem;
+  font-weight: bold;
   color: ${props => props.color};
+  background: var(--header-white);
   text-transform: uppercase;
-  font-size: 1rem;
   text-align: center;
   border-left: var(--col-border);
   border-right: var(--col-border);
@@ -55,9 +57,9 @@ const TableHeading = () => (
   <TheHeader>
     <tr>
       <SuperTitle colSpan={2} scope="colgroup" color="green">
-        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan>
+        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan> {/* eslint-disable-line */}
         <DropWordOnMobile>Move</DropWordOnMobile> Effectiveness
-        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan>
+        <EmojiSpan role="img" aria-label="swords">⚔️⚔️</EmojiSpan> {/* eslint-disable-line */}
       </SuperTitle>
       <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Type</TypeColumnTitle>
       <SuperTitle colSpan={2} scope="colgroup" color="red">
