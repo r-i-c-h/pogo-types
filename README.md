@@ -16,13 +16,15 @@ Deploy to be via github-pages...
 
 # TASK LIST...
 >> FIX: Column Widths
->> FONTS: Set for final design. Maybe Archivo Black? Anonymous Pro?
-
+>> FONTS: Set for final design. ROBOTO CONDENSED Maybe Archivo Black? Anonymous Pro?
 >> FEAT: Alt row backgrounds?
 >> BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
 >> BUGFIX: Add border-radius to SuperTitles and box-shadow
 >> BUGFIX: Firefox won't display double dorders...
 
+>> FEAT Allow for user specified glyph replacement.
+>> FEAT Display Only rows relevant to a particular Pokemon (aka Dual-Types shows 2 rows).
+>> FEAT Choose an attacker (lookup its possible moves), choose a defender. Show interactions between offensive move types and defender's resistances...
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 Ghost => Normal

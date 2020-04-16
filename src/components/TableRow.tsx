@@ -48,12 +48,13 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
 
       <TableRowHeader pogoType={pogoType} />
 
+      <TData><CellContentsToLeft>{typeData.isWeakTo.map((theName: string) => (<Ico key={theName + 'icoWeak'} name={theName} />))}</CellContentsToLeft></TData>
       <TData><CellContentsToLeft>{
         typeData.isSafeFrom.map((theName: string) => (
           <Ico key={theName + 'icoSafe'} name={theName} isExtra={typeData.isExtraSafeFrom.includes(theName)} />)
         )}
       </CellContentsToLeft></TData>
-      <TData><CellContentsToLeft>{typeData.isWeakTo.map((theName: string) => (<Ico key={theName + 'icoWeak'} name={theName} />))}</CellContentsToLeft></TData>
+
     </TRow>
   );
 };

@@ -64,7 +64,7 @@ const TableHeading = () => (
       <TypeColumnTitle scope="col" colSpan={1} rowSpan={2}>Type</TypeColumnTitle>
       <SuperTitle colSpan={2} scope="colgroup" color="red">
         <EmojiSpan role="img" aria-label="shield">🛡</EmojiSpan>
-        <DropWordOnMobile>Pokémon</DropWordOnMobile> Weaknesses
+        <DropWordOnMobile>Pokémon</DropWordOnMobile> Weakness
         <EmojiSpan role="img" aria-label="shield">🛡</EmojiSpan>
       </SuperTitle>
     </tr>
@@ -73,8 +73,8 @@ const TableHeading = () => (
       <ColTitle scope="col" color="green">Destroys</ColTitle>
       <ColTitle scope="col" color="red">Bad VS</ColTitle>
       {/* <th className="col-heading-null">&nbsp;</th> */}
-      <ColTitle scope="col" color="green">Safe From</ColTitle>
       <ColTitle scope="col" color="red">Killed By</ColTitle>
+      <ColTitle scope="col" color="green">Safe From</ColTitle>
     </HeaderBottomRow>
   </TheHeader>
 );
