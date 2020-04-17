@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-/* ! It makes no sense, but the <tfoot> element goes in a table BEFORE <tbody> ! */
+/* Technically, under an old spec <tfoot> element goes in a table after <thead> but BEFORE <tbody>. Changing the <table> to display:grid seems to need everything go back to the logical order */
 const TheFooter = styled.tfoot`
   background: var(--clr-light);
   border: var(--row-border);

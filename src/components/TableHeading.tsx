@@ -12,7 +12,7 @@ const SuperTitle = styled.th`
   margin: 0.2rem;
 `;
 const TypeColumnTitle = styled.th`
-  font-weight: bold;
+  font-weight: 700;
   width: 12vw; /* This doesn't take a max\min-width. ONLY a width :-/  7rem = MAGIC NUMBER */
   background: var(--header-white);
   text-transform: uppercase;
@@ -25,7 +25,7 @@ const TypeColumnTitle = styled.th`
 
 const ColTitle = styled.th`
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 700;
   color: ${props => props.color};
   background: var(--header-white);
   text-transform: uppercase;
@@ -70,8 +70,8 @@ const TableHeading = () => (
     </tr>
 
     <HeaderBottomRow>
-      <ColTitle scope="col" color="green">Destroys</ColTitle>
       <ColTitle scope="col" color="red">Bad VS</ColTitle>
+      <ColTitle scope="col" color="green">Destroys</ColTitle>
       {/* <th className="col-heading-null">&nbsp;</th> */}
       <ColTitle scope="col" color="red">Killed By</ColTitle>
       <ColTitle scope="col" color="green">Safe From</ColTitle>

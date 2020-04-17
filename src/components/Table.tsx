@@ -27,7 +27,6 @@ const TitleLine = styled.caption`
   }
 `;
 
-/* ! It makes no sense, but the <tfoot> element goes in a table BEFORE <tbody> ! */
 const Table = () => (
   <TheTable>
     <TitleLine><h1>POKÉMON GO TYPE EFFECTIVENESS</h1></TitleLine>
@@ -35,8 +34,8 @@ const Table = () => (
     <colgroup span={1}></colgroup>
     <colgroup span={2}></colgroup>
     <TableHeading />
-    <TableFooter />
     <TableBody />
+    <TableFooter />
   </TheTable>
 );
 

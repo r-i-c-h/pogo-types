@@ -39,12 +39,12 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
 
   return (
     <TRow>
-      <TData><CellContentsToRight>{typeData.isGoodVs.map((theName: string) => (<Ico key={theName + 'icoGood'} name={theName} />))}</CellContentsToRight></TData>
       <TData><CellContentsToRight>{
         typeData.isBadVs.map((theName: string) => (
           <Ico key={theName + 'icoBad'} name={theName} isExtra={typeData.isExtraBadVs.includes(theName)} />
         ))
       }</CellContentsToRight></TData>
+      <TData><CellContentsToRight>{typeData.isGoodVs.map((theName: string) => (<Ico key={theName + 'icoGood'} name={theName} />))}</CellContentsToRight></TData>
 
       <TableRowHeader pogoType={pogoType} />
 
