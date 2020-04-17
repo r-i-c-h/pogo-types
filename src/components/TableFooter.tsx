@@ -10,11 +10,18 @@ const TheFooter = styled.tfoot`
   & td {
     padding: 0 1em;
   }
+  p:nth-of-type(2) {
+    border-top: var(--center-col-border);
+    padding-top: 0.5em;
+  }
 `;
 
 const Quote = styled.blockquote`
   font-style: italic;
   font-weight: normal;
+  max-width: 400px;
+  margin: auto;
+  /* padding-bottom: 1rem; */
 `;
 const Shadowed = styled.span`
   box-shadow: var(--boxshadow);
@@ -24,8 +31,10 @@ const TableFooter = () => (
     <tr>
       <td colSpan={5}>
         <p><Shadowed>Emphasized</Shadowed> icons denote a type that is <Shadowed>&quot;double-resisted&quot;</Shadowed>. For example: Poison moves do very little damage to Steel-type Pokémon. </p>
-        <p>Apologies that all text is shrunk down and hard to read on mobile - The challenge was to fit the entire table on-screen at once for moble-viewing while playing. So, given the raw quantity of information present, function took over form.</p>
-        <Quote>May the blessings of RNG be with you &mdash; May all of your hatches be rare, and catches be shiny.</Quote>
+        <p>Apologies that everything is shrunk down &amp; hard to read on mobile. The challenge was to fit the entire table on-screen at once for moble-viewing while playing. So, given the raw quantity of information, function took over form.</p>
+        <Quote>May the mercy of RNG be with you. May all your hatches be rare, rare-candy be plentiful, and catches shiny...
+          <footer><cite>- Trainer Shluckyuckle</cite></footer>
+        </Quote>
       </td>
     </tr>
   </TheFooter>
