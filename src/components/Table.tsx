@@ -11,6 +11,7 @@ const TheTable = styled.table`
   width: 98%;
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom: 0.4rem;
 `;
 
 const TitleLine = styled.caption`
@@ -20,10 +21,8 @@ const TitleLine = styled.caption`
     letter-spacing: 2px;
     margin: 0.2rem;
     padding: 0;
-    @media screen and (max-width: 500px){
       font-size: 1vh;
       line-height: 1;
-    }
   }
 `;
 

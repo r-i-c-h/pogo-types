@@ -8,6 +8,9 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 
 const TRow = styled.tr`
   border-bottom: var(--row-border);
+  & :nth-child(even){
+      background: var(--clr-2);
+  }
 `;
 const TData = styled.td`
   padding: 0;
@@ -21,15 +24,17 @@ const CellContentsToRight = styled.div`
   --override-sort-order: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
+  padding-right: var(--col-interior-side-pad);
+
 `;
 
 const CellContentsToLeft = styled(CellContentsToRight)`
   --normal-sort-order: 1;   /** resorting for "double-resist" icons in Ico.jsx **/
   --override-sort-order:0;
-  /* justify-content: flex-start; */
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: var(--col-interior-side-pad);
 `;
 
 interface Props {

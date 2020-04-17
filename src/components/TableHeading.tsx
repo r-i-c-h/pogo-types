@@ -10,10 +10,13 @@ const SuperTitle = styled.th`
   background: var(--clr-light);
   font-size: 0.8rem;
   padding: 0;
+  border-right: var(--tbody-border);
+  border-left: var(--tbody-border);
+  border-top: var(--col-border);
 `;
 const TypeColumnTitle = styled.th`
   width: 12vw; /* This doesn't take a max\min-width. ONLY a width :-/  7rem = MAGIC NUMBER */
-  background: var(--header-white);
+  background: var(--clr-header-white);
   text-transform: uppercase;
   text-align: center;
   border-top: 1px solid var(--clr-light);
@@ -27,7 +30,7 @@ const ColTitle = styled.th`
   line-height: 0.8;
   white-space: nowrap;
   color: ${props => props.color};
-  background: var(--header-white);
+  background: var(--clr-header-white);
   text-transform: uppercase;
   text-align: center;
   border-left: var(--col-border);

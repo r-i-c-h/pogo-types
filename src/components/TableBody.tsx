@@ -5,8 +5,8 @@ import TableRow from './TableRow';
 
 const TBody = styled.tbody`
   box-shadow: var(--boxshadow);
-  border-right: 1px solid rgba(50,50,50,0.5);
-  border-left: 1px solid rgba(50,50,50,0.5);
+  border-right: var(--tbody-border);
+  border-left: var(--tbody-border);
 `;
 
 

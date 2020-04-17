@@ -6,17 +6,21 @@ export const GlobalStyle = createGlobalStyle`
   /* prettier-ignore */
   :root{
     --header-white: #fefefe;
-    --clr-gray: #999999;
     --clr-light: #dddddd;
+    --clr-gray: #777777;
+    --clr-1: #f0f8ff;
+    --clr-2: #deeeee;
     --col-border: 1px solid #bbb;
-    --row-border: 1px solid #999;
+    --row-border: 1px solid var(--clr-gray);
     --center-col-border: 3px double #000;
+    --tbody-border: 1px solid rgba(50,50,50,0.5);
     --boxshadow: 0px 2px 3px 0px rgba(50,50,50,0.5);
+    --col-interior-side-pad: 5px;
   }
   /* prettier-ignore */
   html,body{ height:100%; margin:0; padding:0;}
   body {
-  background: #F0F8FF;
+    background: var(--clr-1);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
     font-style: italic;
