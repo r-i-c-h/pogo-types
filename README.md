@@ -17,6 +17,7 @@ Deploy to be via github-pages...
 # TASK LIST...
 >> FIX: Column Widths
 >> BUGFIX: No Table-Header Borders in FFox
+>> BUGFIX: No <thead> position:sticky behavior in Chrome
 >> BUGFIX: Setting Table Col Headers to font-size > 0.8 makes Bug's Bad-vs cell wrap which borks vertical layout.
 >> FEAT: Alt row or Col backgrounds?
 >> BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.

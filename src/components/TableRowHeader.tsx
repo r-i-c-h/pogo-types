@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 import Ico from './Ico';
 
 const StyledRowHeader = styled.th`
-  font-size: 1rem;
+  font-size: 1.4rem; /* controls svg icon sizes */
   border-left: var(--center-col-border);
   border-right: var(--center-col-border);
   text-align: center;
@@ -14,15 +14,12 @@ const StyledRowHeader = styled.th`
     padding: 0;
   }
 `;
-const RowHeaderIco = styled(Ico)`
-  font-size: 3rem;
-`;
 
 const RowHeaderTitle = styled.h4`
   color: inherit;
-  margin: 0;
+  font-size: 0.8rem;
+  margin: -0.6em 1px 0 1px;
   padding: 0;
-  font-size: 0.6rem;
 `;
 interface Props {
   pogoType: string;
@@ -30,7 +27,7 @@ interface Props {
 const TableRowHeader: React.FC<Props> = ({ pogoType }): JSX.Element => {
   return (
     <StyledRowHeader scope="row" tabIndex={0}>
-      <RowHeaderIco name={pogoType} />
+      <Ico name={pogoType} />
       <RowHeaderTitle>{pogoType.charAt(0).toUpperCase() + pogoType.slice(1)}</RowHeaderTitle>
     </StyledRowHeader>);
 };

@@ -29,7 +29,7 @@ const TitleLine = styled.caption`
 
 const Table = () => (
   <TheTable>
-    <TitleLine><h1>POKÉMON GO TYPE EFFECTIVENESS</h1></TitleLine>
+    <TitleLine><h1>POKÉMON GO &mdash; TYPE EFFECTIVENESS</h1></TitleLine>
     <colgroup span={2}></colgroup>
     <colgroup span={1}></colgroup>
     <colgroup span={2}></colgroup>

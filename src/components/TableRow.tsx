@@ -10,7 +10,7 @@ const TRow = styled.tr`
   border-bottom: var(--row-border);
 `;
 const TData = styled.td`
-  padding: 0.1rem;
+  padding: 0;
   & :nth-of-type(2),
   & :nth-of-type(4) {
     border-left: var(--col-border);
@@ -21,14 +21,15 @@ const CellContentsToRight = styled.div`
   --override-sort-order: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 
 const CellContentsToLeft = styled(CellContentsToRight)`
   --normal-sort-order: 1;   /** resorting for "double-resist" icons in Ico.jsx **/
   --override-sort-order:0;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  justify-content: center;
 `;
 
 interface Props {

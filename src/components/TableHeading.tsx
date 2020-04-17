@@ -2,17 +2,16 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const TheHeader = styled.thead`
-  /* display: block; */
   width: 100%;
   position: sticky;
   top: 0;
 `;
 const SuperTitle = styled.th`
   background: var(--clr-light);
-  margin: 0.2rem;
+  font-size: 0.8rem;
+  padding: 0;
 `;
 const TypeColumnTitle = styled.th`
-  font-weight: 700;
   width: 12vw; /* This doesn't take a max\min-width. ONLY a width :-/  7rem = MAGIC NUMBER */
   background: var(--header-white);
   text-transform: uppercase;
@@ -24,8 +23,9 @@ const TypeColumnTitle = styled.th`
 `;
 
 const ColTitle = styled.th`
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 0.8;
+  white-space: nowrap;
   color: ${props => props.color};
   background: var(--header-white);
   text-transform: uppercase;
@@ -35,6 +35,7 @@ const ColTitle = styled.th`
 `;
 
 const HeaderBottomRow = styled.tr`
+  line-height: 0;
   border-top: var(--row-border);
   border-bottom: var(--row-border);
   box-shadow: var(--boxshadow);
