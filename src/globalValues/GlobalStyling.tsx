@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   background: #F0F8FF;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
+    font-style: italic;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

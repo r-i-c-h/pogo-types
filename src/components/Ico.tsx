@@ -14,6 +14,7 @@ const IconSVG = styled.svg<IcoProps>`
   display: inline-block;
   height: 1em;
   width: 1em;
+  font-style: normal;
   fill-rule: evenodd;
   clip-rule: evenodd;
   stroke: var(--clr-gray);
