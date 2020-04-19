@@ -1,6 +1,6 @@
-// export interface FullSet {
-//   [key: string]: RulesSet;
-// }
+export interface ThemeColorsObj {
+  [key: string]: string;
+}
 
 export interface PogoTypeData {
   [key: string]: string;

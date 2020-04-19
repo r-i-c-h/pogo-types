@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import { typeColors } from '../globalValues/GlobalConstants';
-interface ThemeColorsObj {
-  [key: string]: string;
-}
+import { ThemeColorsObj } from '../globalValues/Interfaces';
 
 interface IcoProps {
   name: string;
@@ -11,7 +9,6 @@ interface IcoProps {
 }
 
 const IconSVG = styled.svg<IcoProps>`
-  display: inline-block;
   height: 1em;
   width: 1em;
   font-style: normal;
@@ -24,6 +21,9 @@ const IconSVG = styled.svg<IcoProps>`
     let colorBank: ThemeColorsObj = typeColors;
     return colorBank[props.name];
   }};
+  @media screen and (min-width: 30rem){
+    margin: 0.1em;
+  }
   ${ props =>
     props.isExtra &&
     `border-radius: 50%;
@@ -31,6 +31,9 @@ const IconSVG = styled.svg<IcoProps>`
     border: 1px solid var(--clr-gray);
     box-shadow: 0px 2px 3px 2px rgba(50,50,50,1);
     margin: 0.1em;
+    @media screen and (min-width: 30rem){
+      margin: 0.2em;
+    }
     `
   };
 `;
@@ -46,4 +49,4 @@ const Ico: React.FC<IcoProps> = ({ name, isExtra }): JSX.Element => {
   return (<IconSVG name={name} isExtra={isExtra}> {generateUseTag(name)} </IconSVG>);
 };
 
-export default Ico;;
+export default Ico;

@@ -21,7 +21,7 @@ const Quote = styled.blockquote`
   font-weight: normal;
   max-width: 400px;
   margin: auto;
-  /* padding-bottom: 1rem; */
+  padding: 0 1rem 1rem 1rem;
 `;
 const Shadowed = styled.span`
   box-shadow: var(--boxshadow);
@@ -30,9 +30,10 @@ const TableFooter = () => (
   <TheFooter>
     <tr>
       <td colSpan={5}>
-        <p><Shadowed>Emphasized</Shadowed> icons denote a type that is <Shadowed>&quot;double-resisted&quot;</Shadowed>. For example: Poison moves do very little damage to Steel-type Pokémon. </p>
-        <p>Apologies that everything is shrunk down &amp; hard to read on mobile. The challenge was to fit the entire table on-screen at once for moble-viewing while playing. So, given the raw quantity of information, function took over form.</p>
-        <Quote>May the mercy of RNG be with you. May all your hatches be rare, rare-candy be plentiful, and catches shiny...
+        <p><Shadowed>Emphasized</Shadowed> icons denote a type that has <Shadowed>&quot;double-resistance&quot;</Shadowed>. Example: Poison moves do very little damage to Steel-type Pokémon. </p>
+        <p>Obviously the challenge was to fit the entire table on-screen at once for mobile-viewing while playing. So, given the raw quantity of information, function took over form.</p>
+
+        <Quote>May the blessings of RNG be upon you; May all your hatches be rare, encounters be shiny, battles be victorious, and candy be plentiful...
           <footer><cite>- Trainer Shluckyuckle</cite></footer>
         </Quote>
       </td>

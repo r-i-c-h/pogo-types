@@ -11,18 +11,20 @@ const TheTable = styled.table`
   width: 98%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.4em;
+  box-shadow: var(--boxshadow);
+  border-right: var(--tbody-border);
+  border-left: var(--tbody-border);
 `;
 
 const TitleLine = styled.caption`
   h1 {
-    font-size: 1.2rem;
+    font-size: 2vw;
     font-weight: 700;
     letter-spacing: 2px;
-    margin: 0.2rem;
-    padding: 0;
-      font-size: 1vh;
-      line-height: 1;
+    margin: 0.6em;
+    padding: 2px;
+    line-height: 0.2;
   }
 `;
 

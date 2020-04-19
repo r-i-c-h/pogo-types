@@ -8,8 +8,16 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 
 const TRow = styled.tr`
   border-bottom: var(--row-border);
+  & :nth-child(1) > td> div:nth-child(1){
+    padding:0;
+  }
   & :nth-child(even){
       background: var(--clr-2);
+  }
+  &:first-of-type {
+    th {
+      padding-top: 3px;
+    }
   }
 `;
 const TData = styled.td`
@@ -19,18 +27,19 @@ const TData = styled.td`
     border-left: var(--col-border);
   }
 `;
-const CellContentsToRight = styled.div`
+const CellContents = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`;
+const CellContentsToRight = styled(CellContents)`
   --normal-sort-order: 0; /** resorting for "double-resist" icons in Ico.jsx **/
   --override-sort-order: 1;
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
   padding-right: var(--col-interior-side-pad);
-
 `;
 
-const CellContentsToLeft = styled(CellContentsToRight)`
+const CellContentsToLeft = styled(CellContents)`
   --normal-sort-order: 1;   /** resorting for "double-resist" icons in Ico.jsx **/
   --override-sort-order:0;
   justify-content: flex-start;
@@ -60,7 +69,6 @@ const TableRow: React.FC<Props> = ({ pogoType }): JSX.Element => {
           <Ico key={theName + 'icoSafe'} name={theName} isExtra={typeData.isExtraSafeFrom.includes(theName)} />)
         )}
       </CellContentsToLeft></TData>
-
     </TRow>
   );
 };

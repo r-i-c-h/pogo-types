@@ -12,10 +12,10 @@ const StyledRowHeader = styled.th`
 `;
 
 const RowHeaderTitle = styled.h4`
-  color: inherit;
   font-size: 0.7rem;
-  margin: -0.6em 1px 0 1px;
-  padding: 0;
+  margin: -0.6em 0 -0.1em 0;
+  padding: 0 2px;
+  text-transform: uppercase;
 `;
 interface Props {
   pogoType: string;

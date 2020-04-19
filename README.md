@@ -15,17 +15,16 @@ I experimented with making the SVGs all render as links to jump/slide to the app
 Deploy to be via github-pages...
 
 # TASK LIST...
->> FIX: Column Widths
->> BUGFIX: No Table-Header Borders in FFox
->> BUGFIX: No <thead> position:sticky behavior in Chrome
->> BUGFIX: Setting Table Col Headers to font-size > 0.8 makes Bug's Bad-vs cell wrap which borks vertical layout.
->> FEAT: Alt row or Col backgrounds?
->> BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
->> BUGFIX: Add border-radius to SuperTitles and box-shadow
->> BUGFIX: Firefox won't display double dorders for "Type" box...
->> FEAT Allow for user specified glyph replacement.
->> FEAT Display Only rows relevant to a particular Pokemon (aka Dual-Types shows 2 rows).
->> FEAT Choose an attacker (lookup its possible moves), choose a defender. Show interactions between offensive move types and defender's resistances...
+  * FIX: Column Widths
+
+  * BUGFIX: No <thead> position:sticky behavior in Chrome
+  * BUGFIX: Setting Table Col Headers to font-size > 0.8 makes Bug's Bad-vs cell wrap which borks vertical layout.
+  * BUGFIX: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
+  * BUGFIX: Add border-radius to SuperTitles and box-shadow
+
+  * FEAT Allow for user specified glyph replacement.
+  * FEAT Display Only rows relevant to a particular Pokemon (aka Dual-Types shows 2 rows).
+  * FEAT Choose an attacker (lookup its possible moves), choose a defender. Show interactions between offensive move types and defender's resistances...
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 Specific "Double Resistance" when X attacks Y:

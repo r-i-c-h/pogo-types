@@ -5,17 +5,17 @@ export const GlobalStyle = createGlobalStyle`
   *,*::before,*::after{ box-sizing: border-box; }
   /* prettier-ignore */
   :root{
-    --header-white: #fefefe;
+    --clr-header-white: #fefefe;
     --clr-light: #dddddd;
     --clr-gray: #777777;
     --clr-1: #f0f8ff;
     --clr-2: #deeeee;
+    --col-interior-side-pad: 2px;
     --col-border: 1px solid #bbb;
     --row-border: 1px solid var(--clr-gray);
     --center-col-border: 3px double #000;
     --tbody-border: 1px solid rgba(50,50,50,0.5);
     --boxshadow: 0px 2px 3px 0px rgba(50,50,50,0.5);
-    --col-interior-side-pad: 5px;
   }
   /* prettier-ignore */
   html,body{ height:100%; margin:0; padding:0;}
@@ -27,8 +27,6 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
-
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
