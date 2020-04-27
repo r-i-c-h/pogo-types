@@ -13,7 +13,7 @@ const StyledRowHeader = styled.th`
 
 const RowHeaderTitle = styled.h4`
   font-size: 0.7rem;
-  margin: -0.6em 0 -0.1em 0;
+  margin: -0.6em 0 -0.2em 0;
   padding: 0 2px;
   text-transform: uppercase;
 `;

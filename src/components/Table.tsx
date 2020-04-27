@@ -19,7 +19,7 @@ const TheTable = styled.table`
 
 const TitleLine = styled.caption`
   h1 {
-    font-size: 0.8rem;
+    font-size: calc(0.8 * 1rem);
     font-weight: 700;
     letter-spacing: 3px;
     margin: 0.4em;

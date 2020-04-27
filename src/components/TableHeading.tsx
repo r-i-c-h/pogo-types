@@ -4,7 +4,6 @@ import styled from 'styled-components/macro';
 const TheHeader = styled.thead`
   position: sticky;
   top: 0;
-  transform: scale(1);
   border-spacing: 0;
 `;
 
@@ -18,6 +17,7 @@ const SuperTitle = styled.th`
   border: var(--blk-border);
   border-right: var(--tbody-border);
   border-left: var(--tbody-border);
+  white-space: nowrap;
 `;
 const CenterColumnTitle = styled.th`
   width: 10%;
@@ -46,12 +46,12 @@ const ColTitle = styled.th`
   background: var(--clr-header-white);
   background-clip: padding-box;
   border-right: var(--col-border);
-  &:nth-of-type(1),
-  &:nth-of-type(4){ width: 30% }
+  /* &:nth-of-type(1),
+  &:nth-of-type(4){ width: 30% } */
 `;
 
 const EmojiSpan = styled.span`
-  @media screen and (max-width: 511px){
+  @media screen and (max-width: 419px){
     display: none;
   }
 `;
