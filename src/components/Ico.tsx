@@ -27,6 +27,9 @@ const IconSVG = styled.svg<IcoProps>`
   ${ props =>
     props.isExtra &&
     `border-radius: 50%;
+    overflow:visible;
+    /* transform: scale(1.1); */
+    padding: 1px;
     order: var(--override-sort-order);
     border: 1px solid var(--clr-gray);
     box-shadow: 0px 2px 3px 2px rgba(50,50,50,1);

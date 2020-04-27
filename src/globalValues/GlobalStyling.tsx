@@ -5,13 +5,18 @@ export const GlobalStyle = createGlobalStyle`
   *,*::before,*::after{ box-sizing: border-box; }
   /* prettier-ignore */
   :root{
-    --clr-header-white: #fefefe;
-    --clr-light: #dddddd;
+    --clr-header-white: #FEFEFE;
+    /* --clr-whiteish: #F0F0F0; */
+    --clr-light: #DDDDDD;
     --clr-gray: #777777;
-    --clr-1: #f0f8ff;
-    --clr-2: #deeeee;
-    --col-interior-side-pad: 2px;
-    --col-border: 1px solid #bbb;
+    --clr-body-bkg: #F0F8FF;
+    --clr-other: #FFF7F0;
+    --header-red: #d3425f;
+    --header-green: #41933c;
+    --clr-table-alt-row: #DEEEEE;
+    --col-interior-side-pad: 4px;
+    --col-border: 1px solid #BBB;
+    --blk-brder: 1px solid #000000;
     --row-border: 1px solid var(--clr-gray);
     --center-col-border: 3px double #000;
     --tbody-border: 1px solid rgba(50,50,50,0.5);
@@ -20,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   /* prettier-ignore */
   html,body{ height:100%; margin:0; padding:0;}
   body {
-    background: var(--clr-1);
+    background: var(--clr-body-bkg);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
     font-style: italic;

@@ -8,15 +8,21 @@ import { lookupObj } from '../globalValues/GlobalConstants';
 
 const TRow = styled.tr`
   border-bottom: var(--row-border);
-  & :nth-child(1) > td> div:nth-child(1){
-    padding:0;
+
+  &:nth-child(even) {
+    background: var(--clr-table-alt-row);
   }
-  & :nth-child(even){
-      background: var(--clr-2);
-  }
+
   &:first-of-type {
     th {
       padding-top: 3px;
+    }
+  }
+  /* last-row align to top: */
+  &:last-of-type {
+    td {
+      vertical-align: top;
+      padding-top: 0.2em;
     }
   }
 `;

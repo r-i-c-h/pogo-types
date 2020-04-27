@@ -10,7 +10,7 @@ const TheFooter = styled.tfoot`
   & td {
     padding: 0 1em;
   }
-  p:nth-of-type(2) {
+  p:nth-of-type(3) {
     border-top: var(--center-col-border);
     padding-top: 0.5em;
   }
@@ -19,7 +19,6 @@ const TheFooter = styled.tfoot`
 const Quote = styled.blockquote`
   font-style: italic;
   font-weight: normal;
-  max-width: 400px;
   margin: auto;
   padding: 0 1rem 1rem 1rem;
 `;
@@ -30,8 +29,9 @@ const TableFooter = () => (
   <TheFooter>
     <tr>
       <td colSpan={5}>
-        <p><Shadowed>Emphasized</Shadowed> icons denote a type that has <Shadowed>&quot;double-resistance&quot;</Shadowed>. Example: Poison moves do very little damage to Steel-type Pokémon. </p>
-        <p>Obviously the challenge was to fit the entire table on-screen at once for mobile-viewing while playing. So, given the raw quantity of information, function took over form.</p>
+        <p><Shadowed>Emphasized</Shadowed> icons denote a type that has <Shadowed>&quot;double-resistance&quot;</Shadowed>.</p>
+        <p><em>Example</em>: <Shadowed>Poison</Shadowed> moves do very little damage to <Shadowed>Steel</Shadowed>-type Pokémon. </p>
+        <p>Obviously the challenge is to fit the entire table on-screen at once for mobile-viewing while playing. So, given the quantity of information, function > form.</p>
 
         <Quote>May the blessings of RNG be upon you; May all your hatches be rare, encounters be shiny, battles be victorious, and candy be plentiful...
           <footer><cite>- Trainer Shluckyuckle</cite></footer>
