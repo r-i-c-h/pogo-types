@@ -9,26 +9,23 @@ FYI: React + Typescript for a One-Page-Table is **absurd**. This sort of informa
 
 Big thanks to [Simone Masiero](https://github.com/duiker101/pokemon-type-svg-icons) & [Daniel Motta](https://dribbble.com/shots/4862612-Pokedex-iOS-app) for the Pokemon Icon SVG assets!
 
-Huge thanks to [Roundicons](https://roundicons.com/icon-packs/pokemon-go-filled-outline-icons/) for the source logo assets!
+Ditto for my thanks to [Roundicons](https://roundicons.com/icon-packs/pokemon-go-filled-outline-icons/) for the source logo assets!
 
----
 
 ## TASK LIST...
-  * **FIX**: better double-box-shadow for double-resist icons - Can't read ghost or poison.
-  * **FIX**: Icon sizes up, line-height down on desktop / tablet? Keep aspect ration of cells the same?
-  * **FIX**: Column Widths via grid?? TBD...
-  * **FIX**: Test on iOS Safari
+  * **BUGFIX?**: Site disappears on gh-pages build? The [repo setting](https://github.com/r-i-c-h/pogo-types/settings) `custom domain` field should say `www.pogotypes.com` ...
+  * **TODO**: Icon sizes up, line-height down on desktop / tablet? Keep aspect ration of cells the same?
+  * **TODO**: Column Widths via grid?? TBD...
+  * **TODO**: Test on iOS Safari
   * **BUGFIX**: No <thead> position:sticky behavior in Chrome
-  * **BUGFIX**: Setting Table Col Headers to font-size > 0.8 makes Bug's Bad-vs cell wrap which borks vertical layout.
-  * **BUGFIX**: Fix Overlap From the SuperTitles background into the Type Cell's borders area.
-  * **BUGFIX**: Add border-radius to SuperTitles and box-shadow
   * **FEAT**: Make it a PWA...
-  * **FEAT**: Display Only rows relevant to a particular Pokemon (aka Dual-Types shows 2 rows).
+  * **FEAT**: Display Only rows relevant to particular Pokemon(s) (aka Dual-Types shows 2 rows)
   * **FEAT**: Allow for user specified glyph replacements.
   * **FEAT**: Choose an attacker (lookup its possible moves), choose a defender. Show interactions between offensive move types and defender's resistances...
-
 ---
 # DevNotes:
+
+https://codepen.io/MadeByMike/pen/bEEGvv?editors=1100 - Fluid Vertical Rhythm.
 
 ### Specific "Double Resistance" when X attacks Y:
 * Ghost => Normal
@@ -84,7 +81,14 @@ To minify SVGs:
 To combine files (though has no ____)
  `cat *.svg > mergedfile.svg`
 
-See https://codepen.io/r-i-c-h/pen/ZEGNVmZ?editors=0100 for managing SVG Icons with `<use>`
+
+The `use` code I went with was `return (<use href={'#'.concat(name)} />);`.
+
+Have also seen it as:
+  * `<use xlink:href=#{name} />`
+  * `<use xlinkHref=#{name} />`
+See https://codepen.io/r-i-c-h/pen/ZEGNVmZ?editors=0100 for managing SVG Icons with `<use>`:
+
 
 ```html
 <svg id="symbols" xmlns="http://www.w3.org/2000/svg">
@@ -93,13 +97,6 @@ See https://codepen.io/r-i-c-h/pen/ZEGNVmZ?editors=0100 for managing SVG Icons w
 </svg>
 <svg class="icon dragon"> <use xlink:href="#dragon" /> </svg>
 ```
-
-The `use` code I went with was `return (<use href={'#'.concat(name)} />);`.
-
-Have also seen it as:
-  * `<use xlink:href=#{name} />`
-  * `<use xlinkHref=#{name} />`
-
 ---
 
 Possible InfoSauces:

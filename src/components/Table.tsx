@@ -19,12 +19,12 @@ const TheTable = styled.table`
 
 const TitleLine = styled.caption`
   h1 {
-    font-size: 2vw;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0.6em;
+    letter-spacing: 3px;
+    margin: 0.4em;
     padding: 2px;
-    line-height: 0.2;
+    line-height: 0;
   }
 `;
 

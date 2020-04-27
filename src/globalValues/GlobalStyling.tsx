@@ -10,14 +10,14 @@ export const GlobalStyle = createGlobalStyle`
     --clr-light: #DDDDDD;
     --clr-gray: #777777;
     --clr-body-bkg: #F0F8FF;
-    --clr-other: #FFF7F0;
+    /* --clr-other: #FFF7F0; */
     --header-red: #d3425f;
     --header-green: #41933c;
     --clr-table-alt-row: #DEEEEE;
     --col-interior-side-pad: 4px;
     --col-border: 1px solid #BBB;
-    --blk-brder: 1px solid #000000;
-    --row-border: 1px solid var(--clr-gray);
+    --blk-border: 1px solid #000000;
+    --row-border: 1px solid #777777;
     --center-col-border: 3px double #000;
     --tbody-border: 1px solid rgba(50,50,50,0.5);
     --boxshadow: 0px 2px 3px 0px rgba(50,50,50,0.5);
