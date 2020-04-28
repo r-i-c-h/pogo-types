@@ -28,14 +28,7 @@ const TitleLine = styled.caption`
 
     @media screen and (max-width: 450px){
       font-size: calc(0.8 * 1rem);
-      line-height: 0;
-    }
-    @media screen and (min-width: 959px){
-      font-size: 1.5rem;
-    }
-    @media screen and (min-width: 1100px){ /* scale back down for horizontal lappy/desktop display */
-      font-size: 1.2rem;
-      line-height: 0;
+      line-height: 0.1;
     }
   }
 `;

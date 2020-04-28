@@ -34,25 +34,14 @@ export const GlobalStyle = createGlobalStyle`
     @media screen and (min-width: 400px){
       font-size: 1.1rem;
     }
-    @media screen and (min-width: 639px){
+    @media screen and (min-width: 720px){
+      font-size: 1.2rem;
+    }
+    @media screen and (min-width: 767px){
       font-size: 1.3rem;
     }
-    @media screen and (min-width: 719px){
-      font-size: 1.4rem;
+    @media screen and (min-width: 900px){ /* Going to assume we are back on desktop */
+      font-size: 1.2rem;
     }
-    @media screen and (min-width: 769px){
-      font-size: 1.5rem;
-    }
-    @media screen and (min-width: 799px){
-      font-size: 1.6rem;
-    }
-    @media screen and (min-width: 999px){
-      font-size: 1.7rem;
-    }
-    @media screen and (min-width: 1100px){ /* scale back down for horizontal lappy/desktop display */
-      font-size: 1.4rem;
-    }
-
   }
-
 `;

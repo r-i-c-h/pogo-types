@@ -16,7 +16,7 @@ Ditto for my thanks to [Roundicons](https://roundicons.com/icon-packs/pokemon-go
   * **BUGFIX?**: Site disappears on gh-pages build? The [repo setting](https://github.com/r-i-c-h/pogo-types/settings) `custom domain` field should say `www.pogotypes.com` ...
   * **TODO**: Column Widths via grid?? TBD...
   * **TODO**: Test on iOS Safari
-  * **BUGFIX**: No <thead> position:sticky behavior in Chrome
+  * **BUGFIX**: No <thead> position:sticky behavior in Chrome - see notes below for possible answer...
   * **FEAT**: Make it a PWA...
   * **FEAT**: Display Only rows relevant to particular Pokemon(s) (aka Dual-Types shows 2 rows)
   * **FEAT**: Allow for user specified glyph replacements.
@@ -26,7 +26,6 @@ Ditto for my thanks to [Roundicons](https://roundicons.com/icon-packs/pokemon-go
 
 # DevNotes:
 
-https://codepen.io/MadeByMike/pen/bEEGvv?editors=1100 - Fluid Vertical Rhythm? Or perhaps not...
 
 ### Specific "Double Resistance" when X attacks Y:
 * Ghost => Normal
@@ -71,6 +70,14 @@ https://codepen.io/MadeByMike/pen/bEEGvv?editors=1100 - Fluid Vertical Rhythm? O
 ```
 
 ---
+
+https://codepen.io/MadeByMike/pen/bEEGvv?editors=1100 - Fluid Vertical Rhythm? Or perhaps not...
+https://codepen.io/r-i-c-h/pen/LYpLvvz?editors=1100 - Table with locked head and **defined height**! per
+
+Alternate idea from https://stackoverflow.com/questions/8970362/setting-a-max-height-on-a-table/42112251#42112251:
+Set `display: block;` for the table;
+Set `position: sticky; top: 0;` for the header row;
+---
 #### "SVG Stuff"
 
 In original SVGs for each file had `fill="none"`, but the independent `<path>` elements within each one had `fill="#fff"`
@@ -99,6 +106,7 @@ See https://codepen.io/r-i-c-h/pen/ZEGNVmZ?editors=0100 for managing SVG Icons w
 <svg class="icon dragon"> <use xlink:href="#dragon" /> </svg>
 ```
 ---
+
 
 Possible InfoSauces:
 * http://www.nintendolife.com/news/2020/03/guide_pokemon_go_type_chart_-_effectiveness_and_weakness_for_all_18_types

@@ -15,20 +15,16 @@ const SuperTitle = styled.th`
   border-right: var(--tbody-border);
   border-left: var(--tbody-border);
   white-space: nowrap;
+  font-size: 0.9rem;
+  line-height: 1.1;
   @media screen and (max-width: 479px){
-    font-size: 0.8rem;
     line-height: 0.9;
+    font-size: 0.8rem;
     padding: 0;
-  }
-  @media screen and (min-width: 1100px){ /* scale back down for horizontal lappy/desktop display */
-    font-size: 0.8rem;
-    line-height: 0.9;
-    padding:0;
   }
 `;
 const CenterColumnTitle = styled.th`
-  width: 10%;
-  /* width: 12vw; This doesn't take a max\min-width. ONLY a width = MAGIC NUMBER :-( */
+  width: 10%; /* width: 12vw; This doesn't take a max\min-width. ONLY a width = MAGIC NUMBER :-( */
   background: var(--clr-header-white);
   background-clip: padding-box; /* <~~ Need for Firefox */
   text-transform: uppercase;
@@ -53,8 +49,10 @@ const ColTitle = styled.th`
   background: var(--clr-header-white);
   background-clip: padding-box;
   border-right: var(--col-border);
-  /* &:nth-of-type(1),
-  &:nth-of-type(4){ width: 30% } */
+  line-height: 0.9;
+  @media screen and (min-width: 900px){ /* shrink back down for desktop */
+    font-size: 0.8em;
+  }
 `;
 
 const EmojiSpan = styled.span`
