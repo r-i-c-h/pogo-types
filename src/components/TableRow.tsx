@@ -12,17 +12,19 @@ const TRow = styled.tr`
   &:nth-child(even) {
     background: var(--clr-table-alt-row);
   }
-
+  /* push down first row a tiny bit */
   &:first-of-type {
     th {
       padding-top: 3px;
     }
   }
-  /* last-row align to top: */
+  /* last-row align to top when small. */
   &:last-of-type {
-    td {
-      vertical-align: top;
-      padding-top: 0.2em;
+    @media screen and (max-width: 400px){
+      td {
+        vertical-align: top;
+        padding-top: 0.2em;
+      }
     }
   }
 `;

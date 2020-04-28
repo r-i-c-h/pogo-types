@@ -9,6 +9,7 @@ interface IcoProps {
 }
 
 const IconSVG = styled.svg<IcoProps>`
+  display: inline-block;
   height: 1em;
   width: 1em;
   font-style: normal;
@@ -21,9 +22,6 @@ const IconSVG = styled.svg<IcoProps>`
     let colorBank: ThemeColorsObj = typeColors;
     return colorBank[props.name];
   }};
-  @media screen and (min-width: 30rem){
-    margin: 0.1em;
-  }
   ${ props =>
     props.isExtra &&
     `border-radius: 50%;
