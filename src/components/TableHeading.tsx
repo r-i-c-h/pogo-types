@@ -11,13 +11,20 @@ const SuperTitle = styled.th`
   width: 45%;
   background: var(--clr-light);
   background-clip: padding-box; /* <~~ Need for Firefox */
-  font-size: 0.8rem;
-  line-height: 0.9;
-  padding: 0;
   border: var(--blk-border);
   border-right: var(--tbody-border);
   border-left: var(--tbody-border);
   white-space: nowrap;
+  @media screen and (max-width: 479px){
+    font-size: 0.8rem;
+    line-height: 0.9;
+    padding: 0;
+  }
+  @media screen and (min-width: 1100px){ /* scale back down for horizontal lappy/desktop display */
+    font-size: 0.8rem;
+    line-height: 0.9;
+    padding:0;
+  }
 `;
 const CenterColumnTitle = styled.th`
   width: 10%;

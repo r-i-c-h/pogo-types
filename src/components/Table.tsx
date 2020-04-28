@@ -19,12 +19,24 @@ const TheTable = styled.table`
 
 const TitleLine = styled.caption`
   h1 {
-    font-size: calc(0.8 * 1rem);
+    line-height: 0.4;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
     font-weight: 700;
-    letter-spacing: 3px;
     margin: 0.4em;
     padding: 2px;
-    line-height: 0;
+
+    @media screen and (max-width: 450px){
+      font-size: calc(0.8 * 1rem);
+      line-height: 0;
+    }
+    @media screen and (min-width: 959px){
+      font-size: 1.5rem;
+    }
+    @media screen and (min-width: 1100px){ /* scale back down for horizontal lappy/desktop display */
+      font-size: 1.2rem;
+      line-height: 0;
+    }
   }
 `;
 
