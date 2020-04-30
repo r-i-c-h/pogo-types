@@ -22,6 +22,9 @@ const Quote = styled.blockquote`
   margin: auto;
   padding: 0 1rem 1rem 1rem;
 `;
+const Citation = styled.a`
+
+`;
 const Shadowed = styled.span`
   box-shadow: var(--boxshadow);
 `;
@@ -30,11 +33,11 @@ const TableFooter = () => (
     <tr>
       <td colSpan={5}>
         <p><Shadowed>Emphasized</Shadowed> icons denote a type that has <Shadowed>&quot;double-resistance&quot;</Shadowed>.</p>
-        <p><em>Example</em>: <Shadowed>Poison</Shadowed> moves do very little damage to <Shadowed>Steel</Shadowed>-type Pokémon. </p>
-        <p>Obviously the challenge is to fit the entire table on-screen at once for mobile-viewing while playing. So, given the quantity of information, function > form.</p>
+        <p><em>Example</em>: <Shadowed><em>Poison</em></Shadowed> moves do very little damage to <Shadowed><em>Steel</em></Shadowed>-type Pokémon. </p>
+        <p>Obviously the challenge here is to fit the entire table on-screen at once given the quantity of information.</p>
 
-        <Quote>May the blessings of RNG be upon you; May all your hatches be rare, encounters be shiny, battles be victorious, and candy be plentiful...
-          <footer><cite>- Trainer Shluckyuckle</cite></footer>
+        <Quote>May the blessings of RNG be upon you; May all your hatches be rare, encounters be shiny, battles be victorious, and rare candy plentiful...
+          <footer><Citation href="https://twitter.com/The_Riz">- @the_riz</Citation></footer>
         </Quote>
       </td>
     </tr>

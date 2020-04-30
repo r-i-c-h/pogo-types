@@ -11,18 +11,16 @@ const SuperTitle = styled.th`
   width: 45%;
   background: var(--clr-light);
   background-clip: padding-box; /* <~~ Need for Firefox */
+  white-space: nowrap;
   border: var(--blk-border);
   border-right: var(--tbody-border);
   border-left: var(--tbody-border);
-  white-space: nowrap;
-  font-size: 0.9rem;
-  line-height: 1.1;
-  @media screen and (max-width: 479px){
-    line-height: 0.9;
-    font-size: 0.8rem;
-    padding: 0;
-  }
-`;
+  vertical-align: center;
+  font-size: var(--supertitle-font-size);
+  line-height: var(--supertitle-line-height);
+  padding: var(--supertitle-padding);
+`
+  ;
 const CenterColumnTitle = styled.th`
   width: 10%; /* width: 12vw; This doesn't take a max\min-width. ONLY a width = MAGIC NUMBER :-( */
   background: var(--clr-header-white);
@@ -50,9 +48,7 @@ const ColTitle = styled.th`
   background-clip: padding-box;
   border-right: var(--col-border);
   line-height: 0.9;
-  @media screen and (min-width: 900px){ /* shrink back down for desktop */
-    font-size: 0.8em;
-  }
+  font-size: var(--col-th-font-size);
 `;
 
 const EmojiSpan = styled.span`
